@@ -1,3 +1,4 @@
+import random
 letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
 
 
@@ -79,4 +80,36 @@ def every_other_letter(word):
     return string
 
 
-print(every_other_letter("Hello world!"))
+# print(every_other_letter("Hello world!"))
+
+
+def reverse_string(word):
+    string = ""
+    for i in range(len(word)-1, -1, -1):
+        string += word[i]
+    return string
+
+
+# print(reverse_string("Hello world!"))
+
+
+def make_spoonerism(word1, word2):
+    return word2[0:1]+word1[1:] + ' ' + word1[0:1]+word2[1:]
+
+
+# print(make_spoonerism("Hello", "world!"))
+
+
+def add_exclamation(word):
+    tmp = word
+    if len(word) >= 20:
+        return word
+    for i in range(len(word)):
+        tmp += '!'
+
+    return tmp
+
+
+numbers_a = range(1, 13)
+numbers_b = random.randrange(1000)
+print(random.randrange(1000))
